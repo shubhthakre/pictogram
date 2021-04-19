@@ -1,0 +1,43 @@
+#darkMode {
+  background: transparent url("./moon.png");
+  background-size: 30px 30px;
+  width:45px;
+  height:45px;
+filter:grayscale(100%);
+border : none ;
+border-radius: 50%;
+transition : background-color 0.3s ease-in-out , filter 0.3s ease-in-out;
+animation-name: stretch;
+animation-duration: 1.5s; 
+animation-timing-function: ease-out; 
+animation-delay: 0s;
+animation-direction: alternate;
+animation-iteration-count: infinite;
+animation-fill-mode: none;
+animation-play-state: running; 
+}
+
+#darkMode {
+  animation: 
+    stretch
+    1.5s
+    ease-out
+    0s
+    alternate
+    infinite
+    none
+    running;
+}
+
+#darkMode:hover,
+#darkMode:focus{
+  filter: none;
+  background-color: black;
+  cursor: pointer;
+}
+
+p{
+  color:chocolate;
+  font-weight: bolder;
+
+}

@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+
+
+
+
+:root {
+ --blue : rgb(26,57,87);
+ --white : rgb (236,236,236);
+}
+body.light{
+  --background-color : var(--white);
+  --text-color : var(--blue);
+  --font-weight:400;
+  /* --img:url("./moon.png"); */
+}
+
+body.dark{
+  --background-color : var(--blue);
+  --text-color : var(--white);
+  --font-weight:500;
+  /* --img:url(""); */
+
+}
+
+/* base styles & title */
+/* body {
+  font-family: "Noto Serif";
+  color: var(--secondary);
+  background: url('https://images.pexels.com/photos/1655166/pexels-photo-1655166.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
+  no-repeat center center;
+} */
+body{
+font-family: "ubuntu" ,sans-serif;
+background: var(--background-color);
+color:var(--text-color);
+font-weight: var(--font-weight);
+transition : background 0.3s ease-in-out , color 0.6s ease-in-out;
+
+}
+
+#image {
+  width:100%;
+  height: 300px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: cover;
+  transition: background-image 0.7s ease-in-out;
+  background-image:var(--image);
+
+}
+
+
+
+.App {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.title h1 {
+  margin-top: 3px;
+  color:chocolate;
+  font-size: 2.9rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  padding: auto;
+  text-align: center;
+}
+.title h2,
+.title p {
+  text-align: center;
+  color: black;
+  font-size:1.3rem ;
+  animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #14d81d;
+  }
+  100% {
+    background-color: #FF4136;
+  }
+}
+
+.title h2 {
+  margin-top: 60px;
+  font-size: 2.6rem;
+}
+
+.progress-bar {
+  height: 5px;
+  background: var(--primary);
+  margin-top: 20px;
+}
+
+/* Form Style  */
+form {
+  margin: 30px auto 10px;
+  text-align: center;
+}
+label input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin: 10px auto;
+  line-height: 30px;
+  color:rgb(156, 43, 43);
+  font-weight: bold;
+  font-size: 24px;
+}
+label:hover {
+  background: var(--primary);
+  color: white;
+}
+.output {
+  height: 60px;
+  font-size: 0.8rem;
+}
+.error {
+  color: var(--error);
+}
+/* ImageGrid Style */
+.img-grid {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+}
+.img-wrap {
+  overflow: hidden;
+  height: 0;
+  padding: 50% 0;
+  /* padding controls height, will always be perfectly square regardless of width */
+  position: relative;
+  opacity: 0.8;
+}
+.img-wrap img {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 150%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* modal styles */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.backdrop img {
+  display: block;
+  max-width: 60%;
+  max-height: 80%;
+  margin: 60px auto;
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+  border: 3px solid white;
+}
