@@ -1,5 +1,5 @@
 #darkMode {
-  background: transparent url("./moon.png");
+  
   background-size: 30px 30px;
   width:45px;
   height:45px;
@@ -32,7 +32,7 @@ animation-play-state: running;
 #darkMode:hover,
 #darkMode:focus{
   filter: none;
-  background-color: black;
+  background-color: rgb(192, 165, 11);
   cursor: pointer;
 }
 

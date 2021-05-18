@@ -1,4 +1,6 @@
 import React from "react";
+import Brightness6Icon from '@material-ui/icons/Brightness6';
+
 import "./style.css";
 
 //☀︎ ☽
@@ -43,9 +45,10 @@ const switchTheme = (e) =>{
     id = "darkMode"
     onClick = {(e)=>switchTheme(e)}
     > 
+    <Brightness6Icon />
       
     </button>
-    <p>Switch Theme</p>
+    
     </div>
   );
 }
